@@ -1,0 +1,8 @@
+
+node_modules/
+platforms/
+plugins/
+release/
+
+my-release-key.keystore
+**/.DS_Store

@@ -1,0 +1,27 @@
+<ion-view view-title="Podcasts">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="podcast in podcasts" type="item-text-wrap">
+        <h2>
+          <a ng-href="{{podcast.url}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+              {{podcast.title}}
+           </a>
+        </h2>
+        <p>{{podcast.author}} - {{podcast.publish}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+    <!--<ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>-->
+  </ion-content>
+</ion-view>

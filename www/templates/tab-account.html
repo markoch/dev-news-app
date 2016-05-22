@@ -1,0 +1,15 @@
+<ion-view view-title="Videos">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="video in videos" type="item-text-wrap">
+        <h2>
+          <a ng-href="{{video.url}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
+              {{video.title}}
+           </a>
+        </h2>
+        <p>{{video.author}} - {{video.publish}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
