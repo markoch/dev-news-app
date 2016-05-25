@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('IndexController', function($scope, indexFactory) {
+.controller('IndexController', function($scope, $state, indexFactory) {
   $scope.articles = indexFactory.getArticles().query(
     function(response){
         $scope.articles = response;
@@ -20,7 +20,7 @@ angular.module('starter.controllers', [])
           $scope.podcastMessage = 'Error: ' + response.status + ' ' + response.statusText;
       }
   );
-  
+
   $scope.videos = indexFactory.getVideos().query(
     function(response){
         $scope.videos = response;
@@ -30,6 +30,22 @@ angular.module('starter.controllers', [])
         $scope.videoMessage = 'Error: ' + response.status + ' ' + response.statusText;
     }
   );
+
+  $scope.articlesSwipeRight = function () {
+    $state.go('tab.chats');
+  };
+
+  $scope.podcastsSwipeLeft = function () {
+    $state.go('tab.dash');
+  };
+
+  $scope.podcastsSwipeRight = function () {
+    $state.go('tab.account');
+  };
+
+  $scope.videosSwipeLeft = function () {
+    $state.go('tab.chats');
+  };
 
 })
 
