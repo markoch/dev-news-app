@@ -31,19 +31,19 @@ angular.module('starter.controllers', [])
     }
   );
 
-  $scope.articlesSwipeRight = function () {
+  $scope.articlesSwipeLeft = function () {
     $state.go('tab.chats');
   };
 
   $scope.podcastsSwipeLeft = function () {
-    $state.go('tab.dash');
-  };
-
-  $scope.podcastsSwipeRight = function () {
     $state.go('tab.account');
   };
 
-  $scope.videosSwipeLeft = function () {
+  $scope.podcastsSwipeRight = function () {
+    $state.go('tab.dash');
+  };
+
+  $scope.videosSwipeRight = function () {
     $state.go('tab.chats');
   };
 
