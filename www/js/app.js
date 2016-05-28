@@ -3,10 +3,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('jsnews', ['ionic', 'ngCordova', 'ui.router','ngResource', 'jsnews.controllers', 'jsnews.services'])
+angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.services'])
 .constant('ApiEndpoint', {url: 'http://devnews-markoch.rhcloud.com/api/v1'})
 
-.run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $timeout) {
+.run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $state, $timeout) {
 
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -19,17 +19,18 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'ui.router','ngResource', 'jsnew
       cordova.plugins.Keyboard.disableScroll(true);
 
     }
+
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
-      window.StatusBar.styleLightContent();
     }
 
     $timeout(function(){
+      $state.go('tab.dash');
       if (navigator.splashscreen) {
         $cordovaSplashscreen.hide();
       }
-    }, 200);
+    }, 2000);
   });
 
   $rootScope.$on('loading:show', function () {
