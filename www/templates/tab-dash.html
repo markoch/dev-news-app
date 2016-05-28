@@ -1,7 +1,7 @@
 <ion-view on-swipe-left="articlesSwipeLeft()" view-title="Articles">
   <ion-content>
     <ion-list>
-      <ion-item class="item item-remove-animate item-icon-right" ng-repeat="article in articles" type="item-text-wrap">
+      <ion-item class="item item-icon-right" ng-repeat="article in articles" type="item-text-wrap">
         <h2>
           <a ng-href="{{article.url}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
               {{article.title}}

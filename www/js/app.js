@@ -3,10 +3,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ui.router','ngResource', 'starter.controllers', 'starter.services'])
+angular.module('jsnews', ['ionic', 'ngCordova', 'ui.router','ngResource', 'jsnews.controllers', 'jsnews.services'])
 .constant('ApiEndpoint', {url: 'http://devnews-markoch.rhcloud.com/api/v1'})
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $timeout) {
+
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,8 +22,34 @@ angular.module('starter', ['ionic', 'ui.router','ngResource', 'starter.controlle
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
+      window.StatusBar.styleLightContent();
     }
+
+    $timeout(function(){
+      if (navigator.splashscreen) {
+        $cordovaSplashscreen.hide();
+      }
+    }, 200);
   });
+
+  $rootScope.$on('loading:show', function () {
+    $ionicLoading.show({
+      template: '<ion-spinner></ion-spinner> Loading ...'
+    });
+  });
+
+  $rootScope.$on('loading:hide', function () {
+    $ionicLoading.hide();
+  });
+
+  $rootScope.$on('$stateChangeStart', function () {
+    $rootScope.$broadcast('loading:show');
+  });
+
+  $rootScope.$on('$stateChangeSuccess', function () {
+    $rootScope.$broadcast('loading:hide');
+  });
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

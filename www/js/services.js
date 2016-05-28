@@ -1,8 +1,6 @@
-angular.module('starter.services', [])
+angular.module('jsnews.services', ['ngResource'])
 
 .service('indexFactory', ['$resource', 'ApiEndpoint', function($resource, ApiEndpoint) {
-    console.log('ApiEndpoint', ApiEndpoint);
-
     this.getHeadlines = function() {
         return $resource(ApiEndpoint.url + '/headlines', null);
     };

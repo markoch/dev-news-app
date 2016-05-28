@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('jsnews.controllers', [])
 
 .controller('IndexController', function($scope, $state, indexFactory) {
   $scope.articles = indexFactory.getArticles().query(
