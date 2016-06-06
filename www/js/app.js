@@ -56,9 +56,6 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.se
 .config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -70,46 +67,37 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.se
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.articles', {
+    url: '/articles',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
+      'tab-articles': {
+        templateUrl: 'templates/tab-articles.html',
         controller: 'IndexController'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.podcasts', {
+      url: '/podcasts',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
+        'tab-podcasts': {
+          templateUrl: 'templates/tab-podcasts.html',
           controller: 'IndexController'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.videos', {
+    url: '/videos',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+      'tab-videos': {
+        templateUrl: 'templates/tab-videos.html',
         controller: 'IndexController'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/articles');
 
 });
