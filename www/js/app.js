@@ -26,7 +26,7 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.se
     }
 
     $timeout(function(){
-      $state.go('tab.dash');
+      $state.go('tab.articles');
       if (navigator.splashscreen) {
         $cordovaSplashscreen.hide();
       }
