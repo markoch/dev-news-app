@@ -47,4 +47,7 @@ angular.module('jsnews.controllers', [])
     $state.go('tab.podcasts');
   };
 
+  $scope.openURL = function(myURL) {
+      var ref = window.open(myURL, '_system', 'location=yes');
+  };
 });

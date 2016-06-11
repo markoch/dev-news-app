@@ -1,13 +1,9 @@
 <ion-view on-swipe-left="podcastsSwipeLeft()" on-swipe-right="podcastsSwipeRight()" view-title="Podcasts">
   <ion-content>
     <ion-list>
-      <ion-item class="item item-icon-right" ng-repeat="podcast in podcasts" type="item-text-wrap">
-        <h2>
-          <a ng-href="{{podcast.url}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
-              {{podcast.title}}
-           </a>
-        </h2>
-        <p>{{podcast.author}} - {{podcast.publish}}</p>
+      <ion-item class="item item-icon-right" ng-repeat="podcast in podcasts" type="item-text-wrap" ng-click="openURL('{{podcast.url}}')">
+        <h2>{{podcast.title}}</a></h2>
+        {{podcast.author}} - {{podcast.publish}}
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>

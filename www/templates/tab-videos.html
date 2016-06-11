@@ -1,13 +1,9 @@
 <ion-view on-swipe-right="videosSwipeRight()" view-title="Videos">
   <ion-content>
     <ion-list>
-      <ion-item class="item item-icon-right" ng-repeat="video in videos" type="item-text-wrap">
-        <h2>
-          <a ng-href="{{video.url}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
-              {{video.title}}
-           </a>
-        </h2>
-        <p>{{video.author}} - {{video.publish}}</p>
+      <ion-item class="item item-icon-right" ng-repeat="video in videos" type="item-text-wrap" ng-click="openURL('{{video.url}}')">
+        <h2>{{video.title}}</h2>
+        {{video.author}} - {{video.publish}}
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
