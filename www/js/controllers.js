@@ -1,6 +1,6 @@
 angular.module('jsnews.controllers', [])
 
-.controller('IndexController', function($scope, $state, indexFactory) {
+.controller('IndexController', function($scope, $state, indexFactory, ApiEndpoint) {
   $scope.articles = indexFactory.getArticles().query(
     function(response){
         $scope.articles = response;
@@ -50,4 +50,35 @@ angular.module('jsnews.controllers', [])
   $scope.openURL = function(myURL) {
       var ref = window.open(myURL, '_system', 'location=yes');
   };
+
+  $scope.incrementArticle = function(article) {
+    indexFactory.incrementArticle(article._id).update(
+          function(response){
+              return response;
+          },
+          function() {
+          }
+      );
+  };
+
+  $scope.incrementPodcast = function(podcast) {
+    indexFactory.incrementPodcast(podcast._id).update(
+          function(response){
+              return response;
+          },
+          function() {
+          }
+      );
+  };
+
+  $scope.incrementVideo = function(video) {
+    indexFactory.incrementVideo(video._id).update(
+          function(response){
+              return response;
+          },
+          function() {
+          }
+      );
+  };
+
 });
