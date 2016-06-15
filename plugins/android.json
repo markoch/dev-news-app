@@ -24,6 +24,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.jsnews.hybrid"
+        },
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "com.jsnews.hybrid"
         }
     },
     "dependent_plugins": {}
