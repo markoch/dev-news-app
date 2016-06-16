@@ -13,4 +13,5 @@ JavaScript News Website at <a href="https://github.com/markoch/dev-news-os">GitH
 
 ## License
 MIT License, see [LICENSE.txt](LICENSE.txt) for more details.
+
 Icon design by <a href="https://www.iconfinder.com/samatodedara">Samat Odedara</a>
