@@ -9,5 +9,8 @@ JavaScript News available at <a href="http://www.javascript-news.org/">http://ww
 
 JavaScript News Website at <a href="https://github.com/markoch/dev-news-os">GitHub</a>
 
+
+
 ## License
 MIT License, see [LICENSE.txt](LICENSE.txt) for more details.
+Icon design by <a href="https://www.iconfinder.com/samatodedara">Samat Odedara</a>
