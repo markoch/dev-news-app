@@ -5,7 +5,7 @@
 
 Here you will find all the details of the Android app for accessing [JavaScript News](http://www.javascript-news.org/)
 
-![Main screen](https://raw.githubusercontent.com/markoch/dev-news-app/master/screenshots/articles_small.png  =320x501)
+![Main screen](https://raw.githubusercontent.com/markoch/dev-news-app/master/screenshots/articles_small.png =320x501)
 
 Get the mobile app at [Google Play Store](https://play.google.com/apps/testing/com.jsnews.hybrid)
 
