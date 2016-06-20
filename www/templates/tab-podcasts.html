@@ -1,7 +1,7 @@
 <ion-view on-swipe-right="podcastsSwipeRight()" view-title="JavaScript News">
   <ion-content>
     <ion-list>
-      <ion-item class="item" ng-repeat="podcast in podcasts" type="item-text-wrap" ng-click="incrementPodcast({{podcast}});openURL('{{podcast.url}}')">
+      <ion-item class="item" ng-repeat="podcast in podcasts" type="item-text-wrap" ng-click="openURL('{{podcast.url}}');incrementPodcast({{podcast}});">
         <p>
         <h2>{{podcast.title}}</a></h2>
         {{podcast.author}} - {{podcast.publish}}

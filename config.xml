@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.jsnews.hybrid" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.jsnews.hybrid" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>JavaScript News</name>
     <description>
         Latest JavaScript developer news.
@@ -9,9 +9,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <allow-navigation href="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
     <preference name="Orientation" value="default" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
