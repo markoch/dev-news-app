@@ -1,10 +1,9 @@
 <ion-view on-swipe-left="articlesSwipeLeft()" view-title="JavaScript News">
   <ion-content>
     <ion-list>
-      <ion-item class="item item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="incrementArticle({{article}});openURL('{{article.url}}')">
+      <ion-item class="item" ng-repeat="article in articles" type="item-text-wrap" ng-click="incrementArticle({{article}});openURL('{{article.url}}')">
         <h2>{{article.title}}</a></h2>
         {{article.author}} - {{article.publish}}
-        <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
   </ion-content>

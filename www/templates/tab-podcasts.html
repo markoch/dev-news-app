@@ -1,10 +1,17 @@
 <ion-view on-swipe-right="podcastsSwipeRight()" view-title="JavaScript News">
   <ion-content>
     <ion-list>
-      <ion-item class="item item-icon-right" ng-repeat="podcast in podcasts" type="item-text-wrap" ng-click="incrementPodcast({{podcast}});openURL('{{podcast.url}}')">
+      <ion-item class="item" ng-repeat="podcast in podcasts" type="item-text-wrap" ng-click="incrementPodcast({{podcast}});openURL('{{podcast.url}}')">
+        <p>
         <h2>{{podcast.title}}</a></h2>
         {{podcast.author}} - {{podcast.publish}}
-        <i class="icon ion-chevron-right icon-accessory"></i>
+      </p>
+        <div class="podcast-section">
+          <audio preload="none" controls>
+            <source ng-src="{{ podcast.dataURL | trustUrl }}" type="audio/mpeg"/>
+            This player is only available in HTML5 enabled browsers. Please update your browser
+          </audio>
+        </div>
       </ion-item>
     </ion-list>
   </ion-content>

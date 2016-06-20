@@ -5,7 +5,11 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.services'])
 .constant('ApiEndpoint', {url: 'http://devnews-markoch.rhcloud.com/api/v1'})
-
+.filter('trustUrl', ['$sce', function ($sce) {
+  return function(url) {
+    return $sce.trustAsResourceUrl(url);
+  };
+}])
 .run(function($ionicPlatform, $rootScope, $ionicLoading, $cordovaSplashscreen, $state, $timeout) {
 
   $ionicPlatform.ready(function() {
@@ -87,15 +91,6 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.se
       }
     })
 
-  .state('tab.videos', {
-    url: '/videos',
-    views: {
-      'tab-videos': {
-        templateUrl: 'templates/tab-videos.html',
-        controller: 'IndexController'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/articles');

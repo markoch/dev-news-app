@@ -28,3 +28,8 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-col
 .tabs-striped .tabs {
   background-color: #FFFCF5;
 }
+
+.podcast-section {
+    padding-bottom: 0;
+    margin-top: 16px
+}
