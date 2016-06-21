@@ -4,6 +4,7 @@
   "description": "An Ionic project",
   "license": "MIT",
   "dependencies": {
+    "angular-youtube-embed": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.1",
     "gulp-concat": "^2.2.0",

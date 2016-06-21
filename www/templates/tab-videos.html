@@ -1,0 +1,13 @@
+<ion-view on-swipe-right="videosSwipeRight()" view-title="JavaScript News">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item" ng-repeat="video in videos" type="item-text-wrap">
+        <h2>{{video.title}}</h2>
+        {{video.author}} - {{video.publish}}
+        <div class="video-container">
+            <youtube-video video-url="video.dataURL"></youtube-video>
+        </div>
+      </ion-item>
+    </ion-list>
+   </ion-content>
+ </ion-view>

@@ -3,7 +3,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.services'])
+angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.services', 'youtube-embed'])
 .constant('ApiEndpoint', {url: 'http://devnews-markoch.rhcloud.com/api/v1'})
 .filter('trustUrl', ['$sce', function ($sce) {
   return function(url) {
@@ -91,6 +91,15 @@ angular.module('jsnews', ['ionic', 'ngCordova', 'jsnews.controllers', 'jsnews.se
       }
     })
 
+    .state('tab.videos', {
+        url: '/videos',
+        views: {
+          'tab-videos': {
+            templateUrl: 'templates/tab-videos.html',
+            controller: 'IndexController'
+        }
+        }
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/articles');
