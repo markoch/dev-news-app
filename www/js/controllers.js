@@ -31,6 +31,15 @@ angular.module('jsnews.controllers', [])
     }
   );
 
+  $scope.playerVars = {
+    rel: 0,
+    loop: 0,
+    showinfo: 0,
+    modestbranding: 0,
+    autoplay: 0,
+    origin: "com.jsnews.hybrid"
+  }
+
   $scope.articlesSwipeLeft = function () {
     $state.go('tab.podcasts');
   };
