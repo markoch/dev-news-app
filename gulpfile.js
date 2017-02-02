@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gulp = require('internal/fs');
 var gutil = require('gulp-util');
 var bower = require('bower');
 var concat = require('gulp-concat');
