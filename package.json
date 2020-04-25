@@ -20,7 +20,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.7",
     "replace": "^1.0.0",
-    "shelljs": "^0.8.0"
+    "shelljs": "^0.8.4"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
